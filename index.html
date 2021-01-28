@@ -19,15 +19,26 @@
   border-radius: 50%;
 }
 
-dl {
-  list-style: none;
-  padding-left: 40px;
-  list-style-position: outside;
+ol,li {
+    margin: 0;
+    padding: 0;
 }
 
-dl>dt:before {
-  content: attr(seq) "";
-  font-weight: bold;
+ol {
+    counter-reset: foo;
+    display: table;
+}
+li {
+    list-style: none;
+    counter-increment: foo;
+    display: table-row;
+}
+
+li::before {
+    content: counter(foo) "";
+    display: table-cell;
+    text-align: right;
+    padding-right: .3em;
 }
 
 .row::after {
@@ -241,9 +252,12 @@ input:checked + label:after { content: ""; }
     <strong>Summer 2019</strong> - Joined as a Research Intern at <a href="http://starcapital.id/" target="_blank">Star Capital</a> working with Dr. Fei Tony Liu<br>
     <strong>Fall 2018</strong> - Joined B.S in Cognitive Science: Machine Learning and Neural Computation at UC San Diego, CA<br><br>
   </p>
-  <dl>
-    <dt seq="Winter 2021 - ">Joined the <a href="https://cogsci.ucsd.edu/~desa/" target="_blank">de Sa Lab</a> as a Research Assistant in collaboration with Sony working on image segmentation applications</dt>
-  </dl>
+  <ol>
+    <li>
+        omnis ab quasi voluptatem voluptatem consequuntur sed fugit beatae veritatis sed quae dolores iste quasi ipsam ipsam, perspiciatis sed inventore eaque totam inventore sed ut sit dolores perspiciatis inventore ipsa totam ipsam ipsam, 
+    </li>
+  </ol>
+
 
 
 
