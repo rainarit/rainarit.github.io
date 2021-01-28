@@ -19,6 +19,15 @@
   border-radius: 50%;
 }
 
+dl {
+  list-style: none;
+}
+
+dl>dt:before {
+  content: attr(seq) "";
+  font-weight: bold;
+}
+
 .row::after {
     content: "";
     clear: both;
@@ -231,9 +240,7 @@ input:checked + label:after { content: ""; }
     <strong>Fall 2018</strong> - Joined B.S in Cognitive Science: Machine Learning and Neural Computation at UC San Diego, CA<br><br>
   </p>
   <dl>
-    <dt seq="1"><strong>Winter 2021</strong> - Joined the <a href="https://cogsci.ucsd.edu/~desa/" target="_blank">de Sa Lab</a> as a Research Assistant in collaboration with Sony working on image segmentation applications</dt>
-    <dt><strong>Summer 2020</strong> - Joined the <a href="https://www.mattarlab.com/" target="_blank">Mattar Lab</a> as a Research Assistant working on Prioritized Experience Replay variants (RL)</dt>
-    <dt><strong>Summer 2020</strong> - Joined as an Undergraduate Researcher - Machine Learning at <a href="https://www.research.ibm.com/" target="_blank">IBM</a> in collaboration with UC San Diego</dt>
+    <dt seq="Winter 2021 - ">Joined the <a href="https://cogsci.ucsd.edu/~desa/" target="_blank">de Sa Lab</a> as a Research Assistant in collaboration with Sony working on image segmentation applications</dt>
   </dl>
 
 
