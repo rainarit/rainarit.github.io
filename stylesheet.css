@@ -76,28 +76,28 @@ a:hover {
 }
 
 body, td, th, tr, p, a {
-  font-family: 'DM Sans', Verdana, Helvetica, sans-serif;
+  font-family: 'DM Serif Display', Verdana, Helvetica, sans-serif;
   font-size: 14px
 }
 
 strong {
-  font-family: 'DM Sans', Verdana, Helvetica, sans-serif;
+  font-family: 'DM Serif Display', Verdana, Helvetica, sans-serif;
   font-size: 14px;
 }
 
 heading {
-  font-family: 'DM Sans', Verdana, Helvetica, sans-serif;
+  font-family: 'DM Serif Display', Verdana, Helvetica, sans-serif;
   font-size: 22px;
 }
 
 papertitle {
-  font-family: 'DM Sans', Verdana, Helvetica, sans-serif;
+  font-family: 'DM Serif Display', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700
 }
 
 name {
-  font-family: 'DM Sans', Verdana, Helvetica, sans-serif;
+  font-family: 'DM Serif Display', Verdana, Helvetica, sans-serif;
   font-size: 32px;
 }
 
