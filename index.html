@@ -190,6 +190,22 @@ input:checked + label + .reveal {
 input + label:after { content: ""; }
 input:checked + label:after { content: ""; }
 
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.image2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
 </style>
 
 
@@ -295,8 +311,49 @@ input:checked + label:after { content: ""; }
 <br /> <hr /><br /><br />
 
   <div class="row">
-    <heading>Research Experience</heading><br /><br />
+    <heading>Research</heading><br /><br />
     My research interests incline with deep learning, optimization, and multi-agent intelligent systems
+  </div>
+  <br>
+
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody></tbody>
+    <tr onmouseout="stop()" onmouseover="start()">
+      <td style="width:25%;vertical-align:middle">
+        <div class="parent">
+          <img class="image1" id="before" src="images/p1_before.png" width="180"/>
+          <img class="image2" id="after" src="images/p1_after.png" width="180"/>
+        </div>
+        <script type="text/javascript">
+          function start() {
+            document.getElementById('before').style.opacity = "0";
+            document.getElementById('after').style.opacity = "1";
+          }
+
+          function stop() {
+            document.getElementById('before').style.opacity = "1";
+            document.getElementById('after').style.opacity = "0";
+          }
+          stop()
+        </script>
+      </td>
+      <td style="padding:0px;width:75%;vertical-align:middle">
+        <a href="https://openreview.net/pdf?id=5wOkWinQPww" target="_blank">
+          <papertitle>Bio-inspired learnable divisive normalization for ANNs</papertitle>
+        </a>
+        <br>
+        <a href="https://vijayvee.github.io" target="_blank">Vijay Veerabadran</a>, 
+        <strong>Ritik Raina</strong>, 
+        Virginia R. de Sa,
+        <br>
+        <a href="https://openreview.net/pdf?id=5wOkWinQPww" target="_blank">[paper]</a> 
+        <p></p>
+        <p>DivNormEI, a novel bio-inspired convolutional network that performs divisive normalization, a canonical cortical computation, along with lateral inhibition and excitation that is tailored for integration into modern Artificial Neural Networks (ANNs).</p>
+      </td>
+    </tr>
+  </tbody></table>
+
+  <div class="row">
+    <heading>Experience</heading><br /><br />
   </div>
 
   <div class="row">
