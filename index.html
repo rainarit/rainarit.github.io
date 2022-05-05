@@ -1,527 +1,171 @@
-
 <!DOCTYPE html>
-<html>
 
-  <meta property="og:image" content="https://i.imgur.com/60nMKap.png" />
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<style>
-* {
-    box-sizing: border-box;
-}
-
-/* Facebook */
-.fa {
-  padding: 0px;
-  font-size: 30px;
-  width: 30px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-}
-
-ol,li {
-    margin: 0;
-    padding: 0;
-}
-
-ol {
-    display: table;
-}
-
-li {
-    list-style: none;
-    display: table-row;
-}
-
-li::before {
-    content: attr(foo) " - ";
-    display: table-cell;
-    width: 104.5px;
-    text-align: right;
-    font-weight: bold;
-    padding-right: 0.3em;
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* Spacing between rows */
-.row + .row { margin-top: 40px; }
-
-/* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
-}
-
-.col-prof-pic {margin:auto;}
-.col-proj-pic { display:none; }
-
-.container {
-    width:max-width;
-    padding:15px;
-}
-
-ul {
-    list-style: none;
-    margin-left: 0px;
-    padding-left: 15px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    columns: 1;
-    -webkit-columns: 1;
-    -moz-columns: 1;
-}
-
-@media only screen and (min-width: 500px) {
-
-    /* For desktop: */
-    .container {
-        max-width:850px;
-        margin:auto;
-    }
-    .col-bio {max-width: 65%;}
-    .col-prof-pic {float:right; margin-left:20px;}
-    .col-proj-pic {max-width: 25%; float:left; display:inline; padding-right: 20px;}
-    .col-proj-desc {max-width: 75%; float:left;}
-}
-
-@media only screen and (min-width: 850px) {
-    /* For desktop: */
-    ul {
-        columns: 2;
-        -webkit-columns: 2;
-        -moz-columns: 2;
-    }
-}
-
-a {
-    color: #1772d0;
-    text-decoration:none;
-}
-
-a:focus, a:hover {
-    color: #f09228;
-    text-decoration:none;
-}
-
-body,td,th,tr,p,a {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height:130%;
-}
-
-strong {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 15px;
-	font-weight: 700;
-}
-
-heading {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 22px;
-}
-
-papertitle {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-}
-
-name {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 40px;
-}
-
-li span {
-    margin-left: -11px;
-}
-
-.col-proj-pic img {
-    max-width: 100%;
-}
-
-.cropcircle {
-	border-radius: 100%;
-    background: #eee no-repeat center;
-    background-size: cover;
-}
-
-#profile-img{
-    height: 250px;
-    width: 250px;
-    background-image: url("images/RitikRaina.jpeg");
-    position:relative;
-    margin:0 auto;
-    opacity:1;
-    /*-webkit-transition: opacity 2s ease-in-out;
-    -moz-transition: opacity 2s ease-in-out;
-    -o-transition: opacity 2s ease-in-out;
-    transition: opacity 2s ease-in-out;
-    */
-}
-
-span.highlight {
-    background-color: #000000;
-}
-
-label {
-    font-family: 'Lato', Verdana, Helvetica, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-.reveal {
-  max-height: 0;
-  transition: max-height 0.15s ease-out;
-  overflow: hidden;
-}
-
-input:checked + label + .reveal {
-  max-height: 500px;
-  transition: max-height 0.25s ease-in;
-}
-
-input + label:after { content: ""; }
-input:checked + label:after { content: ""; }
-
-.parent {
-  position: relative;
-  top: 0;
-  left: 0;
-}
-.image1 {
-  position: relative;
-  top: 0;
-  left: 0;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-.image2 {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  transition: opacity .2s ease-in-out;
-  -moz-transition: opacity .2s ease-in-out;
-  -webkit-transition: opacity .2s ease-in-out;
-}
-
-</style>
-
+<html lang="en">
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159154011-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-159154011-2');
-</script>
-
-
-
-  <title>Ritik Raina</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/en/thumb/4/44/University_of_California%2C_San_Diego_seal.svg/1200px-University_of_California%2C_San_Diego_seal.svg.png" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet">
-
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="description" content="computer vision,deep learning,artificial intelligence">
+	<meta name="author" content="Ritik Raina">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+	<title>Ritik Raina's Homepage</title>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
 </head>
 
-<body>
+<style>
+	body {font-size: 12px;color: black}
+	html {scroll-behavior: smooth;}
+	footer {text-align: center;
+		font-weight: 300;}
+	.container {width: 100%; max-width: 70em;}
+	a.fakelink {cursor: pointer;}
+	.bibref {
+		margin-top: 2%;
+		margin-left: 2%;
+		display:none;
+		font-family: monospace;
+	}
+	td.exp_place {
+		padding-left: 2%;
+		/*font-weight: 700;*/
+		/*color: black;*/
+	}
+
+	td.exp_desc {
+		padding-left: 2%;
+		/*font-weight: 300;*/
+	}
+	td.exp_duration {
+		text-align: right;
+		/*font-weight: 300;*/
+	}
+	td.exp_logo {
+		padding-left: 7%;
+	}
+	tr.exp_item td {
+		padding-top: 1%;
+	}
+	/*a {color: black}*/
+</style>
+
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
+<div class="container" style="padding-top: 80px; font-size: 12px;">
+	<div align="left">
+		<!-- <h1 class="text-center" aligh="center"> -->
+		<!-- </h1><br> -->
+		<img src="./images/photo/RitikRaina.jpeg" height="170px" style="float:left; margin-right:5%; ">
+		<h4 >Ritik Raina</h4><br />
+		Undergraduate Student<br />
+		<a href="https://cogsci.ucsd.edu/">Department of Cognitive Science</a><br />
+		<a href="http://ucsd.edu/">University of California - San Diego</a>, San Diego, CA</a><br /><br />
+		<a href="mailto:rraina@ucsd.edu">Email</a> &nbsp;|&nbsp;
+		<a href="https://www.linkedin.com/in/ritikraina/" >LinkedIn</a> &nbsp;|&nbsp;
+		<a href="https://github.com/rainarit">GitHub</a> &nbsp;|&nbsp;
+		<a href="https://scholar.google.com/citations?user=jYqXas4AAAAJ&hl=en">Google Scholar</a> &nbsp;|&nbsp;
+		<a href="./data/Ritik_CV.pdf">Resume</a>
+	</div>
+</div>
+
+<br>
+
+
 <div class="container">
+	<h3 id="Overview" style="padding-top: 80px; margin-top: -80px;"></h3>
 
-	<hr /> <br />
-  <div class="row">
-    <div id="profile-img" class="col-prof-pic cropcircle">
-    </div>
-    <div class="col-bio">
-      <p align="center">
-		  <name>Ritik Raina</name> <br />
-		  <a href = "mailto:rraina@ucsd.edu">rraina@ucsd.edu</a>
+	I am a fourth-year undergrad student in the Cognitive Science Department in <a href="http://www.ucsd.edu">University of California - San Diego</a> advised by Prof. Virginia de Sa. 
 
-	  </p>
 
-      <p>I am a senior at <a href="http://www.ucsd.edu/" target="_blank">UC San Diego</a>
-      pursuing a Bachelor of Science in <a href = "http://www.cogsci.ucsd.edu/" target="_blank">
-      cognitive science</a>, specializing in machine learning and neural computation.
-      </p>
+	My current research mainly focues on unsupervised representation learning, computer vision, and brain inspired neural architectures.
+  
+	<br><hr>
+</div>
 
-      <p>
-        At UCSD, I am a research assistant at the <a href="https://cogsci.ucsd.edu/~desa/" target="_blank">de Sa Lab</a> where I'm working on brain-inspired computer vision. 
-        I am also a student researcher as a part of the HDSI & Intel DCA Research Project Collaboration. Previously, I worked at IBM in collaboration with UCSD as a researcher in their Artificial Intelligence for 
-        Healthy Living (AIHL) program.
-      </p>
+<div class="container" style="font-size: 12px">
+	<h4 id="Research" style="padding-top: 80px; margin-top: -80px;">Research</h4><br>
+	<!-- My current research mainly focues on video+language. I've also worked on skeleton-based action recognition. Representative works are highlighted. -->
 
-      <p align=center>
-
-    <a href="mailto:rraina@ucsd.edu" class="fa fa-envelope-o icon-first"></a> &nbsp;&nbsp;&nbsp;
-    <a href="http://www.github.com/rainarit" class="fa fa-github icon" target="_blank"></a> &nbsp;&nbsp;&nbsp;
-    <a href="data/Ritik_CV.pdf" class="fa fa-file-pdf-o icon" target="_blank"></a> &nbsp;&nbsp;&nbsp;
-		<a href="http://www.facebook.com/rrainaa" class="fa fa-facebook" target="_blank"></a> &nbsp;&nbsp;&nbsp;
-    <a href="https://www.linkedin.com/in/ritikraina" class="fa fa-linkedin icon" target="_blank"></a> &nbsp;&nbsp;&nbsp;
-    <a href="https://twitter.com/thisisritik" class="fa fa-twitter icon" target="_blank"></a>
-    
-	  </p>
-    </div>
-
-</div><br /> <hr /><br /><br />
-
-  <heading>Recent News</heading>
-  <div class="row" style="overflow-y: scroll; height:190px;">
-  <p>
-    <ol>
-      <li foo="Winter 2022">
-        Paper accepted at <a href="https://www.visionsciences.org" target="_blank">VSS 2022</a>.
-      </li>
-      <li foo="Winter 2022">
-        Joining as a Student Researcher at <a href="https://www.svrhm.com" target="_blank">Intel Corporation</a>.
-      </li>
-      <li foo="Fall 2021">
-        Paper accepted at <a href="https://www.svrhm.com" target="_blank">SVRHM 2021 Workshop @ NeurIPS</a>.
-      </li>
-      <li foo="Spring 2021">
-        Invited as a guest speaker to <a href="https://www.qmul.ac.uk/smd/" target="_blank">Barts and The London School of Medicine and Dentistry</a> to talk about medical artificial intelligence.
-      </li>
-      <li foo="Winter 2021">
-        Joined the <a href="https://cogsci.ucsd.edu/~desa/" target="_blank">de Sa Lab</a> as a Research Assistant in collaboration with Sony working on computer vision perception
-      </li>
-      <li foo="Summer 2020">
-        Honored to be an Undergraduate Researcher - Machine Learning at <a href="https://www.research.ibm.com/" target="_blank">IBM</a> in collaboration with UC San Diego
-      </li>
-      <li foo="Winter 2020">
-        Joined as a Tech Fellow (iOS) at <a href="http://codepath.org" target="_blank">CodePath</a> where I taught iOS app development
-      </li>
-      <li foo="Summer 2019">
-        Accepted as a Research Intern at <a href="http://starcapital.id/" target="_blank">Star Capital</a> working with <a href="https://feitonyliu.wordpress.com" target="_blank">Dr. Fei Tony Liu</a>
-      </li>
-      <li foo="Fall 2018">
-        Started my B.S in Cognitive Science: Machine Learning and Neural Computation at UC San Diego, CA
-      </li>
-    </ol>
-  </p>
-  </div>  
-
-<br /> <hr /><br /><br />
-
-  <div class="row">
-    <heading>Research</heading><br /><br />
-    My research interests lie in deep learning, computer vision, and optimization.
-  </div>
-
-  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody></tbody>
-    <tr onmouseout="stop()" onmouseover="start()">
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="parent">
-          <img class="image1" id="before" src="images/veerabadran2021bioinspired_before.png" width="110%"/>
-          <img class="image2" id="after" src="images/veerabadran2021bioinspired_after.png" width="110%"/>
-        </div>
-        <script type="text/javascript">
-          function start() {
-            document.getElementById('before').style.opacity = "0";
-            document.getElementById('after').style.opacity = "1";
-          }
-
-          function stop() {
-            document.getElementById('before').style.opacity = "1";
-            document.getElementById('after').style.opacity = "0";
-          }
-          stop()
-        </script>
-      </td>
-      <td style="padding:0px;width:75%;vertical-align:middle">
-        <a href="https://openreview.net/pdf?id=-ZOjASLOsrV" target="_blank">
-          <papertitle>Bio-inspired learnable divisive normalization for ANNs</papertitle>
-        </a>
-        <br>
-        <a href="https://vijayvee.github.io" target="_blank">Vijay Veerabadran</a>, <strong>Ritik Raina</strong>, Virginia R. de Sa,
-        <br>
-        <em>SVRHM 2021 Workshop @ NeurIPS</em>
-        <br>
-        <a href="https://openreview.net/pdf?id=-ZOjASLOsrV" target="_blank">paper</a> / <a href="data/veerabadran2021bioinspired.bib">bibtex</a>
-        <p></p>
-        <p>DivNormEI, a novel bio-inspired convolutional network that performs divisive normalization, a canonical cortical computation, along with lateral inhibition and excitation that is tailored for integration into modern ANNs.</p>
-      </td>
-    </tr>
-  </tbody></table>
-
-  <br /> <hr /><br /><br />
-
-  <div class="row">
-    <heading>Experience</heading>
-  </div>
-
-  <div class="row">
-    <a href="https://www.mit.edu" target="_blank">
-      <div class="col-proj-pic"><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Intel_logo_%282020%2C_light_blue%29.svg/2880px-Intel_logo_%282020%2C_light_blue%29.svg.png'></div>
-    </a>
-    <div class="col-proj-desc">
-      <a href="https://www.mit.edu" target="_blank">
-        <papertitle>Intel Corporation</papertitle>
-      </a><br>
-      <strong>Student Researcher</strong><br>
-      <em>San Diego, CA </em > &bull; Winter 2022 - Present<br>
-      <p>
-        · Working in the Happiness Project Team as a part of the HDSI & Intel DCA Research Project Collaboration.<br>
-      </p>
-    </div>
-  </div>
-
-  <div class="row">
-    <a href="https://cogsci.ucsd.edu/~desa/" target="_blank">
-      <div class="col-proj-pic"><img src='https://cogsci.ucsd.edu/~desa/bcigroup/images/tim_nima_eegart.jpg'></div>
-    </a>
-    <div class="col-proj-desc">
-      <a href="https://cogsci.ucsd.edu/~desa/" target="_blank">
-        <papertitle>de Sa Lab</papertitle>
-      </a><br>
-      <strong>Research Assistant - Deep Learning</strong><br>
-      <em>San Diego, CA </em > &bull; Winter 2021 - Present<br>
-      <p>
-        · Researched in developing DivNormEI, a novel bio-inspired convolutional network that performs divisive normalization, along with lateral inhibition/excitation interactions, tailored for integration into modern deep neural networks. This research is supported by the Sony Research Award Program.<br>
-        · Integrated DivNormEI into existing deep learning models for semantic segmentation to produce increased accuracy and robustness.<br>
-        · DivNorm models outperformed Baseline-VGG9 models on the ImageNet-100 validation set by 1.8% on image classification.<br>
-        · Work accepted in Shared Visual Representations in Human & Machine Intelligence (SVRHM) Workshop at NeurIPS 2021.<br>
-      </p>
-    </div>
-  </div>
-
-  <div class="row">
-    <a href="https://www.research.ibm.com/" target="_blank">
-      <div class="col-proj-pic"><img src='https://research.ibm.com/artificial-intelligence/images//nav-researchareas.jpg'></div>
-
-    </a>
-    <div class="col-proj-desc">
-      <a href="https://www.research.ibm.com/artificial-intelligence/horizons-network/" target="_blank">
-        <papertitle>IBM AI Horizons Network</papertitle>
-      </a><br>
-      <strong>Undergraduate Researcher - Machine Learning</strong><br>
-      <em>San Diego, CA </em > &bull; Summer 2020 - Spring 2021<br>
-      <p>
-        · Worked with the Artificial Intelligence for Healthy Living (AIHL) team to make microbial ontology classification scale efficiently. <br>
-        · Designed scalable ETL pipeline using AWS S3, and Lambda function to pre-process 300k+ microbe samples into feature representations. <br>
-        · Implementing a hybrid model infrastructure consisting of both Gradient Boosting and LSTM models.<br>
-        · Tuned the Bayesian-optimized BiLSTM regression model using Keras Tuner with a test accuracy of 99.6% against BERT model which gave 79% accuracy.<br>
-        · Evaluated strategies to optimize memory and GPU utilization while deploying models at scale.<br>
-        · A patent was filed for the project design.<br>
-        · Academic Mentor: Yoshiki Vasquez Baeza<br>
-        · Industry Mentors: Niina Haiminen (IBM T. J. Watson Research Center), Laxmi Parida
-        (Computational Genomics Group), Ho-Cheol Kim (Almaden Research Center)
-      </p>
-    </div>
-  </div>
-
-<br /> <hr /><br /><br />
-
-  <div class="row">
-    <heading>Work Experience</heading>
-  </div>
-
-	<div class="row">
-    <a href="http://www.codepath.org" target="_blank">
-      <div class="col-proj-pic"><img src='https://mlt.org/wp-content/uploads/2018/09/codepath-1x1_solid-transparent-300x300.png'></div>
-    </a>
-    <div class="col-proj-desc">
-      <a href="http://www.codepath.org" target="_blank">
-        <papertitle>CodePath</papertitle>
-      </a><br>
-      <strong>Tech Fellow (iOS)</strong><br>
-      <em>San Diego, CA </em > &bull; Winter 2020 - Spring 2020<br>
-      <p>
-        · Increased the largest pipeline of high-performing underrepresented engineers in tech via Codepath, a nonprofit that has raised $1 million from Facebook and is bringing industry level courses to 23+ universities. <br>
-        · As an instructor, I was required to maintain a high-level of understanding of the curriculum topics including but not limited to: Frameworks (i.e. WebKit, MapKit, ARKit, AVFoundation, Vision), iOS Libraries (AlamoFire, AlamoFireImage, MBProgressHUD, SwiftyJSON), Back-end (FireBase and Parse), TableViews and Passing Data, APIs (Twitter API, Parse API, Movies API), AutoLayout (constraints), CocoaPods. <br>
-        · Additionally, I design, develop, and provide my own in-class material to enhance the learning process of iOS to 45+ committed students.
-      </p>
-    </div>
-  </div>
-
-  <div class="row">
-    <a href="http://starcapital.id/" target="_blank">
-      <div class="col-proj-pic"><img src='https://cdn.techinasia.com/data/images/mL1Yg4DNvuTLSh5MPY8pEtpnW1msp33wnrePoZbP.png'></div>
-    </a>
-  <div class="col-proj-desc">
-	<a href="http://starcapital.id/" target="_blank">
-	  <papertitle>Star Capital</papertitle>
-	</a><br>
-	<strong>Research Intern</strong><br>
-	<em>Jakarta, Indonesia </em > &bull; Summer 2019<br>
 	<p>
-    · Worked with the Data Science team to research and develop a deep learning based system for long-term face tracking from propitiatory databases. <br>
-    · Applied a Cascade-CNN model with the utilization of a VGG16 network for face detection/verification. <br>
-    · Deployed further improvements such as applying a multi-patch tracking for tracking faces in consequent frames. <br>
-    · Developed a QT desktop application to utilize my model and further populate the facial database. <br>
-  </p>
-  </div>
+		<img src="./images/research/veerabadran2021bioinspired.png" width="170px" height="auto" style="float:left; margin-right:3%; ">
+		<font color="black" size='2px'>Bio-inspired learnable divisive normalization for ANNs</font></a><br>
+		Vijay Veerabadran, <b>Ritik Raina</b>, Virginia R. de Sa<br>
+		<i>NeurIPS workshop on Shared Visual Representations in Human & Machine Intelligence, 2021</i>
+		<span>
+			<a target="_blank" href="https://openreview.net/pdf?id=-ZOjASLOsrV"> [PDF]</a>
+			<a class="fakelink" onclick="$(this).siblings('.bibref').slideToggle()">[Bibtex]</a>
+			<span class="bibref">
+				@article{veerabadran2021bioinspired,<br>
+					title={Bio-inspired learnable divisive normalization for {ANN}s},<br>
+					author={=Vijay Veerabadran and Ritik Raina and Virginia R. de Sa},<br>
+					booktitle={SVRHM 2021 Workshop @ NeurIPS},
+					year={2021},<br>
+          url={https://openreview.net/forum?id=-ZOjASLOsrV}<br>
+				  }
+			</span>
+		</span>
+	</p>
+</div><br><br>
+
+<div class="container" style="font-size: 12px">
+	<h4 id="Research Experience" style="padding-top: 80px; margin-top: -80px;">Research Experience</h4><br>
+  
+  <p>
+		<img src="./images/experience/intel_logo.png" width="140px" height="auto" style="float:left; margin-right:6.64%; ">
+		<a target="_blank" href="https://www.intel.com/content/www/us/en/research/overview.html"> Intel Corporation</a>, San Diego, CA<br>
+		Jan 2022 - Present. Mentor: Virginia R. de Sa, Jamel Tayeb, Farnaz Abdollahi<br>
+	</p>
+	<p style="clear:both">&nbsp;</p>
+  <p>
+		<img src="./images/experience/desalab.png" width="140px" height="auto" style="float:left; margin-right:6.64%; ">
+		<a target="_blank" href="https://cogsci.ucsd.edu/~desa/"> de Sa Lab</a>, San Diego, CA<br>
+		Jan 2021 - Present. Mentor: <a target="_blank" href="https://cogsci.ucsd.edu/~desa/"> Virginia R. de Sa</a>, <a target="_blank" href="https://vijayvee.github.io/">Vijay Veerabadran</a><br>
+	</p>
+	<p style="clear:both">&nbsp;</p>
+  <p>
+		<img src="./images/experience/ai-horizons-network-leadspace.png" width="140px" height="auto" style="float:left; margin-right:6.64%; ">
+		<a target="_blank" href="https://cogsci.ucsd.edu/~desa/"> IBM AI Horizons Network</a>, San Diego, CA<br>
+		Jul 2020 - Apr 2021. Mentor: Yoshiki Vasquez Baeza<br>
+	</p>
+
+</div><br><br>
+
+<div class="container" style="font-size: 12px">
+	<h4 id="Work Experience" style="padding-top: 80px; margin-top: -80px;">Work Experience</h4><br>
+	<!-- My current research mainly focues on video+language. I've also worked on skeleton-based action recognition. Representative works are highlighted. -->
+  <p>
+		<img src="./images/experience/star_capital.png" width="140px" height="auto" style="float:left; margin-right:6.64%; ">
+		<a target="_blank" href="http://starcapital.id/"> Star Capital</a>, Jakarta, Indonesia<br>
+		Jul 2019 - Sept 2019. Mentor: Tony Liu<br>
+	</p>
+</div><br><br>
+
+<div class="container" style="font-size: 12px">
+	<h4 id="Education" style="padding-top: 80px; margin-top: -80px;">Education</h4><br>
+	<p>
+		<img src="./images/education/UCSDLogo.png" width="40px" height="auto" style="float:left; margin-right:3%; ">
+		<span class="edu_name"><a href="https://ucsd.edu/">University of California - San Diego</a></span>
+		<br />
+		<span class="edu_status">B.S. Cognitive Science, Sept 2018 - June 2022</span>
+    <br />
+    <span class="spec_status">Specialization: Machine Learning & Neural Computation</span>
+	</p>
+</div><br><br>
+
+<div class="container" style="font-size: 12px">
+	<hr />
+	<footer>
+		<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=300&t=n&d=kKMx6WD-SsGJbApTKr34zGfhoB-dl8j_k1kTSNHgNYo&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script>
+		<!-- <p>Last update: Apr. 14, 2021</a>.</p> -->
+	</footer>
+
 </div>
 
-<br /> <hr /><br /><br />
+<br><br>
+<!-- Bootstrap core JavaScript
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
 
-<div class="row">
-  <heading>Invited Talks</heading>
-</div>
-<div class="row">
-  <a href="https://www.qmul.ac.uk/smd/" target="_blank">
-    <div class="col-proj-pic"><img src='https://upload.wikimedia.org/wikipedia/en/thumb/3/38/Queen_Mary_University_of_London_logo.svg/2880px-Queen_Mary_University_of_London_logo.svg.png'></div>
-  </a>
-<div class="col-proj-desc">
-<a href="https://www.qmul.ac.uk/smd/" target="_blank">
-  <papertitle>Queen Mary University of London</papertitle>
-</a><br>
-<strong>Barts and The London School of Medicine and Dentistry</strong><br>
-Spring 2021<br>
-<p>
-  · I gave an introductory talk on microbiome analysis and the use-cases of machine learning algorithms in bioinformatic applications.
-</p>
-</div>
-</div>
-
-<br /> <hr /><br /><br />
-
-  <div class="row">
-  <heading>Selected Coursework</heading>
-    &nbsp; (at UC San Diego)
-
-      <ul>
-        <ol>COGS 190 - Special Project (Mattar Lab)</ol>
-        <ol>COGS 118AB - Machine Learning Algorithms I &amp; II</ol>
-        <ol>COGS 188 - Artificial Intelligence Algorithms</ol>
-        <ol>COGS 108 - Data Science in Practice</ol>
-        <ol>COGS 109 - Modeling and Data Analysis</ol>
-        <ol>COGS 107AB - Neuroscience I &amp; II</ol>
-        <ol>COGS 101C - Language</ol>
-        <ol>MATH 180A - Probability</ol>
-        <ol>BGGN 246A - Computational Neurobiology</ol>
-        <ol>NEUG 221 - Deep Learning for Neuroscience</ol>
-        <ol>NEUG 240 - Math Foundations for Computational Neuroscience</ol>
-		    
-        
-		    <ol>CSE 290 - AI Seminar</ol>
-        <ol>CSE 152A - Computer Vision I</ol>
-        <ol>CSE 101 - Design and Analysis of Algorithms</ol>
-        <ol>CSE 100 - Advanced Data Structures </ol>
-      </ul>
-  </div>
-
-  <br /><br /><hr />
-  <div class="row">
-  <p align="right">
-    <font size="2">
-		<center>
-	  © 2022 Ritik Raina. All rights reserved. <br />
-      Website sourced from <a href="http://people.eecs.berkeley.edu/~barron/">here.</a>
-
-  		</center>
-    </font>
-  </p>
-  </div>
-   <hr/>
-
-</div>
 </body>
 </html>
