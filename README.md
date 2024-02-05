@@ -1,2 +1,2 @@
-# ritik-raina.github.io
+# rainarit.github.io
 My Personal Website
