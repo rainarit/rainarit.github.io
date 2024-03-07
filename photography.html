@@ -1,141 +1,65 @@
+<html>
+  <style>
+    .gallery {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  grid-auto-flow: dense;
+  max-width: 1200px;
+  margin: 10px auto;
+  padding: 300 10px;
+}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ritik Raina</title>
-<meta name="description" content="">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/style_photography.css">
-<link rel="canonical" href="">
-</head>
-<body>
-<header class="wrapper">
-<a class="logo" href="">
-  <img src="asset/profile/ritik.jpg" class="landing">
-  <div>
-    <span class="title">Photography</span>
-  </div>
-</a>
-<nav>
-<a href="index.html">Research</a>
-<a href="blog.html"><b>Photography</b></a>
-</nav>
-</header>
-<main>
-<article class="wrapper">
-  <link href=css/justifiedGallery.min.css rel=stylesheet>
-  <script src=js/jquery-3.5.0.min.js></script>
-  <script src=js/jquery.justifiedGallery.min.js></script>
-  <div id=photo-overlay class="photo-overlay hidden">
-      <img alt=Photo id=photo-overlay-photo class=photo-overlay__photo>
-      <img alt="Photo (lowres)" id=photo-overlay-thumb class="photo-overlay__photo blurred">
-  </div>
-  <script type=text/javascript>
-      document.getElementById("btn-close").addEventListener("click", function() {
-          document.getElementById("photo-overlay").classList.add("hidden")
-      }, !1);
-      function displayOverlay(e) {
-          var n, t = document.getElementById("photo-overlay-photo");
-          t.style.display = "none",
-          t.src = images[e].image,
-          n = document.getElementById("photo-overlay-thumb"),
-          n.style.display = "",
-          n.src = images[e].thumb,
-          t.onload = function() {
-              t.style.display = "",
-              n.style.display = "none"
-          }
-          ,
-          document.getElementById("photo-overlay-infolink").href = images[e].href + "?ref=true#info",
-          document.getElementById("photo-overlay").classList.remove("hidden"),
-          document.getElementById("btn-previous").href = "javascript:displayOverlay(" + (e - 1) + ")",
-          document.getElementById("btn-next").href = "javascript:displayOverlay(" + (e + 1) + ")",
-          document.getElementById("btn-previous").style.display = e == 0 ? "none" : "",
-          document.getElementById("btn-next").style.display = e >= images.length - 1 ? "none" : ""
-      }
-  </script>
-<p style="font-weight:300; font-size: 1.2em;">Black's Beach, California, USA</p>
-  <div id=gallery class=gallery>
-      <a class=grid-item style=cursor:pointer id=gallery_img_0 onclick=displayOverlay(0)>
-          <img src="asset/photography/san diego/black's_beach/IMG_0410.JPG" alt="IMG_0410.JPG">
-      </a>
-      <a class=grid-item style=cursor:pointer id=gallery_img_1 onclick=displayOverlay(1)>
-          <img src="asset/photography/san diego/black's_beach/IMG_0416.JPG" alt="IMG_0416.JPG">
-      </a>
-      <a class=grid-item style=cursor:pointer id=gallery_img_2 onclick=displayOverlay(2)>
-          <img src="asset/photography/san diego/black's_beach/IMG_0567.JPG" alt="IMG_0567.JPG">
-      </a>
-      <a class=grid-item style=cursor:pointer id=gallery_img_3 onclick=displayOverlay(3)>
-          <img src="asset/photography/san diego/black's_beach/IMG_0593.JPG" alt="IMG_0593.JPG">
-      </a>
-      <a class=grid-item style=cursor:pointer id=gallery_img_4 onclick=displayOverlay(4)>
-          <img src="asset/photography/san diego/black's_beach/IMG_0604.JPG" alt="IMG_0604.JPG">
-      </a>
-      <a class=grid-item style=cursor:pointer id=gallery_img_5 onclick=displayOverlay(5)>
-          <img src="asset/photography/san diego/black's_beach/IMG_0399.JPG" alt="IMG_0399.JPG">
-      </a>
-      <a class=grid-item style=cursor:pointer id=gallery_img_6 onclick=displayOverlay(6)>
-          <img src="asset/photography/san diego/black's_beach/IMG_0402.JPG" alt="IMG_0402.JPG">
-      </a>
-      <a class=grid-item style=cursor:pointer id=gallery_img_7 onclick=displayOverlay(7)>
-          <img src="asset/photography/san diego/black's_beach/IMG_0407.JPG" alt="IMG_0407.JPG">
-      </a>
-      <a class=grid-item style=cursor:pointer id=gallery_img_8 onclick=displayOverlay(8)>
-          <img src="asset/photography/san diego/black's_beach/IMG_0408.JPG" alt="IMG_0408.JPG">
-      </a>
-      <a class=grid-item style=cursor:pointer id=gallery_img_9 onclick=displayOverlay(9)>
-          <img src="asset/photography/san diego/black's_beach/IMG_0596.JPG" alt="IMG_0596.JPG">
-      </a>
-      <a class=grid-item style=cursor:pointer id=gallery_img_10 onclick=displayOverlay(10)>
-          <img src="asset/photography/san diego/black's_beach/IMG_0618.JPG" alt="IMG_0618.JPG">
-      </a>
-      <a class=grid-item style=cursor:pointer id=gallery_img_11 onclick=displayOverlay(11)>
-          <img src="asset/photography/san diego/black's_beach/IMG_0624.JPG" alt="IMG_0624.JPG">
-      </a>
-  </div>
-  <script type=text/javascript>
-      function loadNextImages() {
-          for (var e, t, n = images.slice(ptrImage, ptrImage + batchSize), s = 0; s < n.length; s++)
-              t = n[s],
-              e = document.createElement("a"),
-              e.id = "gallery_img_" + t.id,
-              e.style = "cursor: pointer",
-              e.setAttribute("onclick", "javascript:displayOverlay(" + t.id + ")"),
-              e.innerHTML = '<img src="' + t.thumb + '" alt="' + t.title + '">',
-              document.getElementById("gallery").appendChild(e);
-          n.length == 0 && window.removeEventListener("scroll", scrollFunction),
-          ptrImage += batchSize,
-          $("#gallery").justifiedGallery("norewind")
-      }
-      function getGalleryDimensions() {
-          var e = window.innerWidth || 1024;
-          return e < 600 ? {
-              rowHeight: 120,
-              margins: 2
-          } : e < 900 ? {
-              rowHeight: 200,
-              margins: 2
-          } : {
-              rowHeight: 300,
-              margins: 10
-          }
-      }
-      function smugmugThumbs(e, t, n) {
-          var i = Math.max(t, n)
-            , o = /(.*)(\/S\/)(.*)(-S\.jpg)/;
-          return i < 100 ? e.replace(o, "$1/200x200/$3-100x200.jpg") : i < 400 ? e.replace(o, "$1/S/$3-S.jpg") : i < 600 ? e.replace(o, "$1/M/$3-M.jpg") : e.replace(o, "$1/L/$3-L.jpg")
-      }
-      $("#gallery").justifiedGallery({
-          rowHeight: getGalleryDimensions().rowHeight,
-          margins: getGalleryDimensions().margins,
-          border: 0,
-          thumbnailPath: smugmugThumbs
-      })
-  </script>
-</article>
-</main>
+.gallery__item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 
-</body>
+.gallery__item > img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.gallery__item--hor {
+  grid-column: span 2;
+}
+
+.gallery__item--vert {
+  grid-row: span 2;
+}
+
+.gallery__item--lg {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+  </style>
+  <h1 style="text-align: center; padding-top: 100px;">Photography</h1>
+  <div class="container">
+    <div class="gallery">
+      <div class="gallery__item gallery__item--hor">
+        <img src="asset/photography/stony brook/IMG_4224.JPG" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="asset/photography/stony brook/IMG_4231.JPG" alt="">
+      </div>
+      <div class="gallery__item gallery__item--vert"">
+        <img src="asset/photography/stony brook/IMG_4232.JPG" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="asset/photography/stony brook/IMG_4242.JPG" alt="">
+      </div>
+      <div class="gallery__item gallery__item--lg">
+        <img src="asset/photography/stony brook/IMG_4243.JPG" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="asset/photography/stony brook/IMG_4259.JPG" alt="">
+      </div>
+      <div class="gallery__item">
+        <img src="asset/photography/stony brook/IMG_4279.JPG" alt="">
+      </div>
+    </div>
+  </div>
 </html>
