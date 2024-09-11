@@ -104,7 +104,8 @@ a {
   papertitle {
     font-family: 'Fontin';
     font-size: 15px;
-    font-weight: 700
+    font-weight: 700;
+    letter-spacing: 1e-40px;
   }
   
   name {
