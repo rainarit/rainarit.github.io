@@ -276,6 +276,21 @@ a {
     display: inline-block;
 }
 
+.badge-CCN {
+  border: solid #9E9E9E;
+    border-width: 1px;
+    padding: 1px 5px 1px 5px;
+    background-color: --bad;
+    margin-left: 0;
+    --badge-color: 23, 58, 34  ;
+    background: rgba(var(--badge-color), 0.2);
+    border-radius: 4px;
+    color: rgba(var(--badge-color), 1);
+    font-weight: bold;
+    font-style: normal;
+    display: inline-block;
+}
+
 .badge-JOV {
   border: solid #9E9E9E; 
     border-width: 1px;
