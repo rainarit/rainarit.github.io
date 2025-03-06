@@ -10,6 +10,9 @@ I am a second-year Cognitive Science Ph.D. student at Stony Brook University wor
 
 My research interests are in the intersection of multimodal generative modelling and visual perception, focusing on building brain-inspired neural network architectures and generating human-aligned visual content.
 
+I am always interested in research collaborations. Feel free to schedule a 30-min meeting on [Calendly](https://calendly.com/ritik-raina-stonybrook/30min) if you are interested in collaborating or discussing research ideas.
+
+
 ## Select Publications
 
 - **[Framework for a Generative Multi-modal model of Embodied Thought](https://2024.ccneuro.org/pdf/634_Paper_authored_CCN_2024_Zelinsky-FINAL.pdf)**  
@@ -30,8 +33,9 @@ My research interests are in the intersection of multimodal generative modelling
 
 - **[Exploring Biases in Facial Expression Analysis using Synthetic Faces](https://drive.google.com/file/d/1Onf04NMijI0RowD-QCPTJGl9vrsnP38E/view)**  
   **Ritik Raina**, Miguel Monares, Mingze Xu, Sarah Fabi, Xiaojing Xu, Lehan Li, Will Sumerfield, Jin Gan, Virginia R. de Sa  
-  *NeurIPS Workshop on Synthetic Data Generation with Generative AI (SyntheticData4ML) 2022*
+  *NeurIPS SyntheticData4ML Workshop 2022*
 
 - **[Bio-inspired learnable divisive normalization for ANNs](https://openreview.net/pdf?id=-ZOjASLOsrV)**  
   Vijay Veerabadran, **Ritik Raina**, Virginia R. de Sa  
-  *NeurIPS Workshop on Shared Visual Representations in Human & Machine Intelligence (SVRHM) 2021*
+  *NeurIPS SVRHM Workshop 2021*
+
