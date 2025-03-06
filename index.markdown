@@ -16,23 +16,23 @@ Gregory Zelinsky, **Ritik Raina**, Abe Leite, Seoyoung Ahn
   *CCN 2024*
 
 - **[Generating objects in peripheral vision using attention-guided diffusion models](https://jov.arvojournals.org/article.aspx?articleid=2801786)**
-**Ritik Raina**, Seoyoung Ahn, Gregory Zelinsky
+  **Ritik Raina**, Seoyoung Ahn, Gregory Zelinsky
   *VSS 2024*
 
 - **[Adaptive recurrent vision performs zero-shot computation scaling to unseen difficulty levels](https://arxiv.org/abs/2311.06964)**
-Vijay Veerabadran, Srinivas Ravishankar, Yuan Tang, **Ritik Raina**, Virginia R. de Sa
+  Vijay Veerabadran, Srinivas Ravishankar, Yuan Tang, **Ritik Raina**, Virginia R. de Sa
   *NeurIPS 2023*
 
 - **[Cortically motivated recurrence enables task extrapolation](https://drive.google.com/file/d/1Onf04NMijI0RowD-QCPTJGl9vrsnP38E/view)**
-Vijay Veerabadran, Yuan Tang, **Ritik Raina**, Virginia R. de Sa
+  Vijay Veerabadran, Yuan Tang, **Ritik Raina**, Virginia R. de Sa
   *COSYNE 2023*
 
 - **[Exploring Biases in Facial Expression Analysis using Synthetic Faces](https://drive.google.com/file/d/1Onf04NMijI0RowD-QCPTJGl9vrsnP38E/view)**
-**Ritik Raina**, Miguel Monares, Mingze Xu, Sarah Fabi, Xiaojing Xu, Lehan Li, Will Sumerfield, Jin Gan, Virginia R. de Sa
+  **Ritik Raina**, Miguel Monares, Mingze Xu, Sarah Fabi, Xiaojing Xu, Lehan Li, Will Sumerfield, Jin Gan, Virginia R. de Sa
   *NeurIPS Workshop on Synthetic Data Generation with Generative AI (SyntheticData4ML) 2022*
 
 - **[Bio-inspired learnable divisive normalization for ANNs](https://openreview.net/pdf?id=-ZOjASLOsrV)**
-Vijay Veerabadran, **Ritik Raina**, Virginia R. de Sa
+  Vijay Veerabadran, **Ritik Raina**, Virginia R. de Sa
   *NeurIPS Workshop on Shared Visual Representations in Human & Machine Intelligence (SVRHM) 2021*
 
 
