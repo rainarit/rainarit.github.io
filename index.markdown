@@ -12,6 +12,12 @@ My research interests are in the intersection of multimodal generative modelling
 
 I am always interested in research collaborations. Feel free to schedule a 30-min meeting on [Calendly](https://calendly.com/ritik-raina-stonybrook/30min) if you are interested in collaborating or discussing research ideas.
 
+## Recent News
+- Poster accepted at OPAM 2024 (also won Best Poster Award!)
+- Short paper accepted at CCN 2024!
+- Poster accepted at VSS 2024!
+- Paper accepted at NeurIPS 2023!
+
 
 ## Select Publications
 
