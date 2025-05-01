@@ -18,9 +18,7 @@ I am always interested in research collaborations. Feel free to schedule a 30-mi
 - Poster accepted at VSS 2024!
 - Paper accepted at NeurIPS 2023!
 
-
 ## Select Publications
-
 - **[Framework for a Generative Multi-modal model of Embodied Thought](https://2024.ccneuro.org/pdf/634_Paper_authored_CCN_2024_Zelinsky-FINAL.pdf)**  
   Gregory Zelinsky, **Ritik Raina**, Abe Leite, Seoyoung Ahn  
   *CCN 2024*

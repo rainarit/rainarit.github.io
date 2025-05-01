@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Remote Image Generator</title>
+</head>
+<body>
+    <h1>Generate Remote Image</h1>
+    <button id="generateButton">Generate Image</button>
+    <div id="result"></div>
+    <img id="generatedImage" style="display:none;" />
+
+    <script>
+        document.getElementById('generateButton').addEventListener('click', function() {
+            // Show loading message
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = 'Processing...';
+            
+            // Make request to your server-side script
+            fetch('/generate-image', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    server: 'bigcornea.cs.stonybrook.edu',
+                    port: 130,
+                    username: 'rraina',
+                    password: 'YOUR_PASSWORD_HERE' // Note: Sending passwords client-side is a security risk
+                })
+            })
+            .then(response => response.blob())
+            .then(imageBlob => {
+                // Create image URL and display it
+                const imageUrl = URL.createObjectURL(imageBlob);
+                document.getElementById('generatedImage').src = imageUrl;
+                document.getElementById('generatedImage').style.display = 'block';
+                resultDiv.textContent = 'Image generated successfully!';
+            })
+            .catch(error => {
+                resultDiv.textContent = 'Error: ' + error.message;
+            });
+        });
+    </script>
+</body>
+</html>
