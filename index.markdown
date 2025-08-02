@@ -13,12 +13,18 @@ My research interests are in the intersection of multimodal generative modelling
 I am always interested in research collaborations. Feel free to schedule a 30-min meeting on [Calendly](https://calendly.com/ritik-raina-stonybrook/30min) if you are interested in collaborating or discussing research ideas.
 
 ## Recent News
+- Short paper accepted at CCN 2025!
+- Talk Presentation accepted at VSS 2025!
 - Poster accepted at OPAM 2024 (also won Best Poster Award!)
 - Short paper accepted at CCN 2024!
-- Poster accepted at VSS 2024!
+- Talk Presentation accepted at VSS 2024!
 - Paper accepted at NeurIPS 2023!
 
-## Select Publications
+## Select Publications and Talks
+- **[Seen2Scene: a generative model of fixation-by-fixation scene understanding](https://2025.ccneuro.org/abstract_pdf/Raina_2025_Seen2Scene_generative_model_fixation-by-fixation_scene_understanding.pdf)**  
+  **Ritik Raina**, Abe Leite, Alexandros Graikos, Seoyoung Ahn, Gregory Zelinsky
+  *CCN 2025*
+
 - **[Framework for a Generative Multi-modal model of Embodied Thought](https://2024.ccneuro.org/pdf/634_Paper_authored_CCN_2024_Zelinsky-FINAL.pdf)**  
   Gregory Zelinsky, **Ritik Raina**, Abe Leite, Seoyoung Ahn  
   *CCN 2024*
