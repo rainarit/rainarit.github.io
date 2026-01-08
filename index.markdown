@@ -6,7 +6,7 @@ layout: default
 ---
 
 ## About Me
-I am a second-year Cognitive Science Ph.D. student at Stony Brook University working with [Dr. Gregory Zelinsky](https://www.stonybrook.edu/commcms/psychology/faculty/faculty_profiles/gzelinsky). 
+I am a third-year Cognitive Science Ph.D. student at Stony Brook University working with [Dr. Gregory Zelinsky](https://www.stonybrook.edu/commcms/psychology/faculty/faculty_profiles/gzelinsky). 
 
 My research interests are in the intersection of multimodal generative modelling and visual perception, focusing on building brain-inspired neural network architectures and generating human-aligned visual content.
 
