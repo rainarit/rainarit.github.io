@@ -10,7 +10,7 @@ I am a third-year Cognitive Science Ph.D. student at Stony Brook University work
 
 My research interests are in the intersection of multimodal generative modelling and visual perception, focusing on building brain-inspired neural network architectures and generating human-aligned visual content.
 
-I am always interested in research collaborations. Feel free to schedule a 30-min meeting on [Calendly](https://calendly.com/ritik-raina-stonybrook/30min) if you are interested in collaborating or discussing research ideas.
+I am always interested in research collaborations. Feel free to schedule a 30-min meeting on [GCal](https://calendar.app.google/Xixk6ep28USu5AVx9) if you are interested in collaborating or discussing research ideas.
 
 ## Recent News
 - Short paper accepted at CCN 2025!
