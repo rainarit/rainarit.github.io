@@ -13,6 +13,7 @@ My research interests are in the intersection of multimodal generative modelling
 I am always interested in research collaborations. Feel free to schedule a 30-min meeting on [GCal](https://calendar.app.google/Xixk6ep28USu5AVx9) if you are interested in collaborating or discussing research ideas.
 
 ## Recent News
+- Paper accepted at ICLR 2026!
 - Short paper accepted at CCN 2025!
 - Talk Presentation accepted at VSS 2025!
 - Poster accepted at OPAM 2024 (also won Best Poster Award!)
@@ -28,6 +29,10 @@ I am always interested in research collaborations. Feel free to schedule a 30-mi
 - **[Seen2Scene: a generative model of fixation-by-fixation scene understanding](https://2025.ccneuro.org/abstract_pdf/Raina_2025_Seen2Scene_generative_model_fixation-by-fixation_scene_understanding.pdf)**  
   **Ritik Raina**, Abe Leite, Alexandros Graikos, Seoyoung Ahn, Gregory Zelinsky  
   *CCN 2025*
+
+- **[Modeling human scene understanding fixation-by-fixation using generative models](https://jov.arvojournals.org/article.aspx?articleid=2810134)**  
+  **Ritik Raina**, Alexandros Graikos, Abe Leite, Seoyoung Ahn, Gregory Zelinsky  
+  *VSS 2025*
 
 - **[Framework for a Generative Multi-modal model of Embodied Thought](https://2024.ccneuro.org/pdf/634_Paper_authored_CCN_2024_Zelinsky-FINAL.pdf)**  
   Gregory Zelinsky, **Ritik Raina**, Abe Leite, Seoyoung Ahn  
