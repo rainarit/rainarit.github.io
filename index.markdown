@@ -24,7 +24,7 @@ I am always interested in research collaborations. Feel free to schedule a 30-mi
 ## Select Publications and Talks
 - **[Generating metamers of human scene understanding](https://arxiv.org/abs/2601.11675)**  
   **Ritik Raina**, Abe Leite, Alexandros Graikos, Seoyoung Ahn, Dimitris Samaras, Gregory Zelinsky  
-  *ICLR 2026*
+  *ICLR 2026 <span style="color:#800000">(Oral)</span>*
 
 - **[Seen2Scene: a generative model of fixation-by-fixation scene understanding](https://2025.ccneuro.org/abstract_pdf/Raina_2025_Seen2Scene_generative_model_fixation-by-fixation_scene_understanding.pdf)**  
   **Ritik Raina**, Abe Leite, Alexandros Graikos, Seoyoung Ahn, Gregory Zelinsky  
