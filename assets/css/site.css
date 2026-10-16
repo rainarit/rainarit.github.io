@@ -411,6 +411,7 @@ a.pub-title:hover { text-decoration: underline; text-decoration-color: var(--fg-
 .pub-authors a:hover { color: var(--fg); text-decoration: underline; text-decoration-color: var(--fg-4); text-underline-offset: 3px; }
 
 .me { color: var(--fg); font-weight: 500; }
+.vjep-avatar { color: #0080fa; font-weight: 700; font-style: italic; }
 
 .pub-meta {
   font-family: var(--mono);
