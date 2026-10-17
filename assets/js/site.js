@@ -163,9 +163,21 @@
         const live = document.querySelector('[data-live]');
         if (visits && d.total) visits.textContent = d.total.toLocaleString();
         if (live && d.live) live.textContent = d.live + ' reading now';
-        const pins = (d.pins || []).slice().sort((a, b) => b[2] - a[2]).slice(0, 12);
-        if (!pins.length) return;
-        const named = await Promise.all(pins.map(async (p) => ({ n: p[2], g: await place(p[0], p[1]) })));
+        // Pins are aggregated locations [lat, lng, visits, age]; recent visits may not be in them yet
+        const pts = (d.pins || []).map((p) => ({ lat: p[0], lng: p[1], n: p[2] }));
+        const base = pts.slice();
+        (d.recent || []).forEach((r) => {
+          const near = base.some((p) => Math.abs(p.lat - r.lat) < 0.3 && Math.abs(p.lng - r.lon) < 0.3);
+          if (!near) pts.push({ lat: r.lat, lng: r.lon, n: 1, place: r.place, cc: r.cc });
+        });
+        pts.sort((a, b) => b.n - a.n);
+        const pick = pts.slice(0, 16);
+        if (!pick.length) return;
+        const named = await Promise.all(pick.map(async (p) => {
+          let g = await place(p.lat, p.lng);
+          if (!g && p.place) g = { city: p.place, cc: p.cc || '', country: '' };
+          return { n: p.n, g };
+        }));
         // Merge pins that resolve to the same city
         const byCity = new Map();
         named.forEach(({ n, g }) => {

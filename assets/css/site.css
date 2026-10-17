@@ -131,15 +131,35 @@ kbd {
 .id { display: flex; align-items: center; gap: 22px; }
 
 .avatar {
+  position: relative;
   width: 124px;
   height: 155px;
   border-radius: 12px;
-  object-fit: cover;
-  object-position: 50% 25%;
+  overflow: hidden;
   flex: none;
   background: var(--chip);
   box-shadow: 0 0 0 1px var(--line-2);
 }
+.avatar img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 50%; }
+
+/* eye-tracker overlay, shown on hover */
+.avatar .hud { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.25s ease; pointer-events: none; }
+.avatar:hover .hud { opacity: 1; }
+.hud .box { fill: none; stroke: #22c55e; stroke-width: 1.4; }
+.hud .ret { fill: none; stroke: #22c55e; stroke-width: 1.2; }
+.hud .dot { fill: #22c55e; }
+.hud .tag { fill: rgb(0 0 0 / 0.55); }
+.hud text { font: 500 7px var(--mono); fill: #22c55e; }
+.avatar:hover .hud .jit { animation: jitter 2.6s steps(1) infinite; }
+.hud .jit { transform-box: fill-box; transform-origin: center; }
+.hud .jit.r { animation-delay: -1.1s; }
+@keyframes jitter {
+  0% { transform: translate(0, 0); } 18% { transform: translate(0.8px, -0.5px); } 37% { transform: translate(-0.6px, 0.4px); }
+  55% { transform: translate(0.3px, 0.7px); } 74% { transform: translate(-0.7px, -0.3px); } 100% { transform: translate(0, 0); }
+}
+.hud .pulse { opacity: 0; transform-box: fill-box; transform-origin: center; }
+.avatar:hover .hud .pulse { animation: gaze 2s ease-out infinite; }
+@keyframes gaze { 0% { opacity: 0.9; transform: scale(0.6); } 100% { opacity: 0; transform: scale(1.8); } }
 
 .id-text { min-width: 0; }
 
