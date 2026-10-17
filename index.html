@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/assets/css/site.css?v=16" />
+    <link rel="stylesheet" href="/assets/css/site.css?v=18" />
     <script>
       (() => {
         const root = document.documentElement;
@@ -325,9 +325,21 @@
           </ul>
         </section>
         <section id="visitors">
-          <div class="sec-h"><h2>Visitors</h2></div>
+          <div class="sec-h">
+            <h2>Visitors <span class="n" data-visits></span></h2>
+            <span class="aside" data-live></span>
+          </div>
           <div class="visitors">
-            <script src="https://revolvermaps2.com/embed.js" data-site="54k588wzw5tp" data-size="300" data-theme="night" data-color="ffb23f" async></script>
+            <div class="globe">
+              <div class="rm2-globe" data-site="54k588wzw5tp" data-size="260" data-theme="custom" data-color="800000" data-land="d4d4d4" data-ocean="f5f5f5"></div>
+              <script src="https://revolvermaps2.com/embed.js" async></script>
+            </div>
+            <div class="board">
+              <p class="board-h">Top cities</p>
+              <ol class="list cities" id="top-cities">
+                <li class="cities-empty">No visits counted yet. Check back soon.</li>
+              </ol>
+            </div>
           </div>
         </section>
       </main>
@@ -340,6 +352,6 @@
         </span>
       </footer>
     </div>
-    <script src="/assets/js/site.js?v=5"></script>
+    <script src="/assets/js/site.js?v=7"></script>
   </body>
 </html>

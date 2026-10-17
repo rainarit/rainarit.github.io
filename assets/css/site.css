@@ -533,7 +533,22 @@ figure[data-zoom].zooming::after { opacity: 0; }
 .empty { padding: 28px 12px; color: var(--fg-3); font-size: 14px; text-align: center; }
 .fine { margin: 14px 0 0; font-size: 12.5px; color: var(--fg-3); }
 
-.visitors { display: flex; justify-content: center; padding: 12px 0 0; }
+.visitors {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+  padding-top: 8px;
+}
+.globe { width: 260px; }
+.globe iframe { display: block; color-scheme: light; }
+.board-h { margin: 6px 0 4px; font-size: 12px; font-family: var(--mono); letter-spacing: 0.04em; text-transform: uppercase; color: var(--fg-3); }
+.list.cities .row { grid-template-columns: 28px minmax(0, 1fr) auto; padding: 7px 12px; }
+.cities .t { display: inline-flex; align-items: center; gap: 8px; min-width: 0; }
+.cities .t img { width: 16px; height: 12px; border-radius: 2px; box-shadow: 0 0 0 1px var(--line-2); flex: none; object-fit: cover; }
+.cities .t span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cities .x { font-family: var(--mono); font-size: 12px; }
+.cities-empty { padding: 8px 12px; font-size: 13.5px; color: var(--fg-3); list-style: none; }
 
 /* ---------- footer ---------- */
 
@@ -574,6 +589,8 @@ figure[data-zoom].zooming::after { opacity: 0; }
   .pub-authors { white-space: normal; }
   .pub-meta { grid-column: 2; text-align: left; }
   .pub-detail-inner { padding-left: 12px; }
+  .visitors { grid-template-columns: 1fr; gap: 12px; }
+  .globe { margin: 0 auto; }
 }
 
 @media (prefers-reduced-motion: reduce) {

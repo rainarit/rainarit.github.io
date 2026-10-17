@@ -114,6 +114,74 @@
     });
   });
 
+  // Visitors: globe colours follow the site theme; leaderboard of top cities
+  const GLOBE = {
+    light: { land: 'd4d4d4', ocean: 'f5f5f5', c: '800000' },
+    dark: { land: '3d3d3d', ocean: '151515', c: 'f2777a' },
+  };
+  const paintGlobe = () => {
+    const holder = document.querySelector('.rm2-globe');
+    if (!holder) return;
+    const g = GLOBE[root.dataset.theme === 'dark' ? 'dark' : 'light'];
+    holder.dataset.land = g.land; holder.dataset.ocean = g.ocean; holder.dataset.color = g.c;
+    const f = holder.querySelector('iframe');
+    if (f) {
+      const u = new URL(f.src);
+      u.searchParams.set('land', g.land); u.searchParams.set('ocean', g.ocean); u.searchParams.set('c', g.c);
+      if (f.src !== u.href) f.src = u.href;
+    }
+  };
+  paintGlobe();
+  new MutationObserver(paintGlobe).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+  const holder = document.querySelector('.rm2-globe');
+  if (holder) new MutationObserver(paintGlobe).observe(holder, { childList: true });
+
+  const board = document.getElementById('top-cities');
+  if (board) {
+    const cacheGet = (k) => { try { return JSON.parse(localStorage.getItem('geo2:' + k)); } catch { return null; } };
+    const cacheSet = (k, v) => { try { localStorage.setItem('geo2:' + k, JSON.stringify(v)); } catch {} };
+    const place = async (lat, lng) => {
+      const k = lat.toFixed(2) + ',' + lng.toFixed(2);
+      const hit = cacheGet(k);
+      if (hit) return hit;
+      try {
+        const r = await fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`);
+        const d = await r.json();
+        let country = d.countryName || '';
+        try { if (d.countryCode) country = new Intl.DisplayNames(['en'], { type: 'region' }).of(d.countryCode) || country; } catch {}
+        const v = { city: d.city || d.locality || d.principalSubdivision || 'Unknown', cc: (d.countryCode || '').toLowerCase(), country };
+        cacheSet(k, v);
+        return v;
+      } catch { return null; }
+    };
+    const esc = (x) => String(x).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+    fetch('https://revolvermaps2.com/api/feed.php?k=54k588wzw5tp', { cache: 'no-store' })
+      .then((r) => r.json())
+      .then(async (d) => {
+        if (!d || d.error) return;
+        const visits = document.querySelector('[data-visits]');
+        const live = document.querySelector('[data-live]');
+        if (visits && d.total) visits.textContent = d.total.toLocaleString();
+        if (live && d.live) live.textContent = d.live + ' reading now';
+        const pins = (d.pins || []).slice().sort((a, b) => b[2] - a[2]).slice(0, 12);
+        if (!pins.length) return;
+        const named = await Promise.all(pins.map(async (p) => ({ n: p[2], g: await place(p[0], p[1]) })));
+        // Merge pins that resolve to the same city
+        const byCity = new Map();
+        named.forEach(({ n, g }) => {
+          if (!g) return;
+          const key = g.city + '|' + g.cc;
+          const cur = byCity.get(key);
+          if (cur) cur.n += n; else byCity.set(key, { ...g, n });
+        });
+        const top = [...byCity.values()].sort((a, b) => b.n - a.n).slice(0, 8);
+        if (!top.length) return;
+        board.innerHTML = top.map((c, i) => `
+          <li><div class="row"><span class="k">${String(i + 1).padStart(2, '0')}</span><span class="t">${c.cc ? `<img src="https://revolvermaps2.com/assets/flags/${esc(c.cc)}.svg" alt="" loading="lazy" />` : ''}<span>${esc(c.city)}${c.country ? `<span class="sub"> · ${esc(c.country)}</span>` : ''}</span></span><span class="x">${c.n.toLocaleString()}</span></div></li>`).join('');
+      })
+      .catch(() => {});
+  }
+
   // News: show the first few items, scroll for the rest
   const news = document.querySelector('.list.news');
   const fitNews = () => {
